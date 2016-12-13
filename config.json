@@ -1,0 +1,67 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "CC:22:3D:E3:CE:30",
+        "port": 51826,
+        "pin": "031-45-154"
+    },
+
+    "description": "This is an example configuration file with one fake accessory and one fake platform. You can use this as a template for creating your own configuration file containing devices you actually own.",
+    "accessories": [
+    		{
+    			"accessory": "Applescript",
+    			"name": "Discover Weekly",
+    			"on": "tell application ''Spotify'' \n play track ''spotify:user:spotifydiscover:playlist:3mlIskeiGuARRPULUzCwvp'' \n end tell",
+    			"off": "quit application ''Evocam''"
+    		},
+        {
+    			"accessory": "Applescript",
+    			"name": "Tunes",
+    			"on": "tell application ''Spotify'' \n play track ''spotify:user:spotifydiscover:playlist:3mlIskeiGuARRPULUzCwvp'' \n end tell",
+    			"off": "tell application ''Spotify'' \n pause \n end tell"
+    		},
+        {
+    			"accessory": "Applescript",
+    			"name": "Hannah's Discover Weekly",
+    			"on": "tell application ''Spotify'' \n play track ''spotify:user:spotifydiscover:playlist:7G660y2TJolf4SZ1u97bN9'' \n end tell",
+    			"off": "tell application ''Spotify'' \n pause \n end tell"
+    		},
+        {
+    			"accessory": "Applescript",
+    			"name": "Jazz Legends",
+    			"on": "tell application ''Spotify'' \n play track ''spotify:user:1221726481:playlist:5JJnhRpXWbVWO2zMHjrnFr'' \n end tell",
+    			"off": "quit application ''Evocam''"
+    		},
+        {
+    			"accessory": "Applescript",
+    			"name": "Track Skipper",
+    			"on": "tell application ''Spotify'' \n next track \n end tell",
+    			"off": "tell application ''Spotify'' \n previous track \n previous track \n end tell"
+    		},
+        {
+    			"accessory": "Applescript",
+    			"name": "Track Shuffler",
+    			"on": "tell application ''Spotify'' \n set shuffling to true \n end tell",
+    			"off": "tell application ''Spotify'' \n set shuffling to false \n end tell"
+    		},
+        {
+    			"accessory": "Applescript",
+    			"name": "Lower Volume",
+    			"on": "tell application ''Spotify'' \n set sound volume to (sound volume - 10)  \n   end tell",
+    			"off": "tell application ''Spotify'' \n set sound volume  to (sound volume + 10) \n end tell"
+    		},
+        {
+    			"accessory": "Applescript",
+    			"name": "Jam Session",
+    			"on": "tell application ''Ableton Live 9 Suite'' to activate",
+    			"off": "tell application ''Spotify'' \n set sound volume  to (sound volume + 10) \n end tell"
+    		}
+    	],
+
+     "platforms": [
+       {
+           "platform": "LifxLan",
+           "name": "LiFx"
+       }
+    ]
+}
